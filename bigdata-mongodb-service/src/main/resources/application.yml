@@ -1,0 +1,24 @@
+# Spring boot application
+spring:
+  server:
+    port: 9090
+  application:
+    name: bigdata-mongodb-service
+  data:
+    mongodb:
+      uri: mongodb://192.168.99.61:27072/jjs_data
+dubbo:
+  scan:
+    basePackages: com.leyoujia.bigdata.service
+  application:
+    id: bigdata-mongodb
+    name: bigdata-mongodb-service
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+  registry:
+    id: my-registry
+    address: zookeeper://172.16.4.114:2181
+    #address: zookeeper://127.0.0.1:2181
+

@@ -1,0 +1,26 @@
+# 在这里编写springboot的配置信息
+server:
+  port: 8080
+  context-path: /
+  application:
+    name: bigdata-mongodb-consumer
+  data:
+      mongodb:
+        uri: mongodb://192.168.99.61:27072/jjs_data
+management:
+  port: 8081
+
+
+dubbo:
+  application:
+    id: bigdata-mongodb
+    name: bigdata-mongodb-consumer
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+  registry:
+    id: my-registry
+    address: zookeeper://172.16.4.114:2181
+    #address: zookeeper://127.0.0.1:2181
+
